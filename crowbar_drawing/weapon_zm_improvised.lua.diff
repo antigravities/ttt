@@ -1,0 +1,12 @@
+--- "garrysmod\\gamemodes\\terrortown\\entities\\weapons\\weapon_zm_improvised.lua"       2017-02-11 01:42:05.328599400 -0500
++++ weapon_zm_improvised.lua    2017-02-11 23:13:36.327415200 -0500
+@@ -166,7 +166,8 @@
+       self.Weapon:SendWeaponAnim( ACT_VM_MISSCENTER )
+    end
+
+-
++   if tr_main.HitWorld then self.Weapon:SetNextPrimaryFire( CurTime() ) end
++
+    if CLIENT then
+       -- used to be some shit here
+    else -- SERVER
